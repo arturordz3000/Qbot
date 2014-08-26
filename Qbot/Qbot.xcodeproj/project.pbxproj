@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69080AF419AC2383002A7466 /* ColoredBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AF319AC2383002A7466 /* ColoredBlock.m */; };
+		69080AF819AC248A002A7466 /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AF719AC248A002A7466 /* ScreenManager.m */; };
+		69080AFB19AC2507002A7466 /* GameObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AFA19AC2507002A7466 /* GameObjectManager.m */; };
 		699757A919A0605D0020D936 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757A819A0605D0020D936 /* QuartzCore.framework */; };
 		699757AB19A0605D0020D936 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757AA19A0605D0020D936 /* OpenGLES.framework */; };
 		699757AD19A0605D0020D936 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757AC19A0605D0020D936 /* OpenAL.framework */; };
@@ -342,6 +345,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69080AF219AC2383002A7466 /* ColoredBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColoredBlock.h; path = Classes/ColoredBlock.h; sourceTree = "<group>"; };
+		69080AF319AC2383002A7466 /* ColoredBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColoredBlock.m; path = Classes/ColoredBlock.m; sourceTree = "<group>"; };
+		69080AF619AC248A002A7466 /* ScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenManager.h; path = Classes/ScreenManager.h; sourceTree = "<group>"; };
+		69080AF719AC248A002A7466 /* ScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenManager.m; path = Classes/ScreenManager.m; sourceTree = "<group>"; };
+		69080AF919AC2507002A7466 /* GameObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObjectManager.h; path = Classes/GameObjectManager.h; sourceTree = "<group>"; };
+		69080AFA19AC2507002A7466 /* GameObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameObjectManager.m; path = Classes/GameObjectManager.m; sourceTree = "<group>"; };
 		699757A519A0605D0020D936 /* Qbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699757A819A0605D0020D936 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		699757AA19A0605D0020D936 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -891,6 +900,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69080AF119AC2303002A7466 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				69080AF219AC2383002A7466 /* ColoredBlock.h */,
+				69080AF319AC2383002A7466 /* ColoredBlock.m */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		69080AF519AC247A002A7466 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				69080AF619AC248A002A7466 /* ScreenManager.h */,
+				69080AF719AC248A002A7466 /* ScreenManager.m */,
+				69080AF919AC2507002A7466 /* GameObjectManager.h */,
+				69080AFA19AC2507002A7466 /* GameObjectManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		6997579C19A0605D0020D936 = {
 			isa = PBXGroup;
 			children = (
@@ -1678,6 +1707,8 @@
 		69975A2119A0605F0020D936 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				69080AF519AC247A002A7466 /* Managers */,
+				69080AF119AC2303002A7466 /* GameObjects */,
 				69975C5719A068970020D936 /* Scenes */,
 				69975A2219A0605F0020D936 /* AppDelegate.h */,
 				69975A2319A0605F0020D936 /* AppDelegate.m */,
@@ -2147,6 +2178,7 @@
 				699758D419A0605E0020D936 /* cocos2d.m in Sources */,
 				699758AC19A0605E0020D936 /* CCSprite9Slice.m in Sources */,
 				69975C5619A066000020D936 /* DemoMainScene.m in Sources */,
+				69080AF419AC2383002A7466 /* ColoredBlock.m in Sources */,
 				699758EC19A0605E0020D936 /* CCDirectorMac.m in Sources */,
 				6997598219A0605F0020D936 /* CCControl.m in Sources */,
 				6997587C19A0605E0020D936 /* CCParticleSystem.m in Sources */,
@@ -2182,11 +2214,13 @@
 				6997594319A0605E0020D936 /* ALCaptureDevice.m in Sources */,
 				699758C719A0605E0020D936 /* CCTiledMapLayer.m in Sources */,
 				6997580F19A0605D0020D936 /* CCEffectTexture.m in Sources */,
+				69080AFB19AC2507002A7466 /* GameObjectManager.m in Sources */,
 				699758FE19A0605E0020D936 /* CCColor.m in Sources */,
 				6997581819A0605D0020D936 /* CCShader.m in Sources */,
 				6997583A19A0605D0020D936 /* CCAnimation.m in Sources */,
 				6997598619A0605F0020D936 /* CCControlTextureFactory.m in Sources */,
 				6997592A19A0605E0020D936 /* OALAudioActions.m in Sources */,
+				69080AF819AC248A002A7466 /* ScreenManager.m in Sources */,
 				69975A2419A0605F0020D936 /* AppDelegate.m in Sources */,
 				699758DB19A0605E0020D936 /* CCDirectorIOS.m in Sources */,
 				6997587519A0605E0020D936 /* CCParticleBatchNode.m in Sources */,
@@ -2391,6 +2425,7 @@
 				69975A2F19A0605F0020D936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69975A3019A0605F0020D936 /* Build configuration list for PBXNativeTarget "Qbot" */ = {
 			isa = XCConfigurationList;
@@ -2399,6 +2434,7 @@
 				69975A3219A0605F0020D936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
