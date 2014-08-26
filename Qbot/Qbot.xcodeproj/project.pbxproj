@@ -10,6 +10,7 @@
 		69080AF419AC2383002A7466 /* ColoredBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AF319AC2383002A7466 /* ColoredBlock.m */; };
 		69080AF819AC248A002A7466 /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AF719AC248A002A7466 /* ScreenManager.m */; };
 		69080AFB19AC2507002A7466 /* GameObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AFA19AC2507002A7466 /* GameObjectManager.m */; };
+		69080AFF19AC2F52002A7466 /* GridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69080AFE19AC2F52002A7466 /* GridController.m */; };
 		699757A919A0605D0020D936 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757A819A0605D0020D936 /* QuartzCore.framework */; };
 		699757AB19A0605D0020D936 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757AA19A0605D0020D936 /* OpenGLES.framework */; };
 		699757AD19A0605D0020D936 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699757AC19A0605D0020D936 /* OpenAL.framework */; };
@@ -351,6 +352,8 @@
 		69080AF719AC248A002A7466 /* ScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenManager.m; path = Classes/ScreenManager.m; sourceTree = "<group>"; };
 		69080AF919AC2507002A7466 /* GameObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObjectManager.h; path = Classes/GameObjectManager.h; sourceTree = "<group>"; };
 		69080AFA19AC2507002A7466 /* GameObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameObjectManager.m; path = Classes/GameObjectManager.m; sourceTree = "<group>"; };
+		69080AFD19AC2F52002A7466 /* GridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridController.h; path = Classes/GridController.h; sourceTree = "<group>"; };
+		69080AFE19AC2F52002A7466 /* GridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridController.m; path = Classes/GridController.m; sourceTree = "<group>"; };
 		699757A519A0605D0020D936 /* Qbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699757A819A0605D0020D936 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		699757AA19A0605D0020D936 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -918,6 +921,15 @@
 				69080AFA19AC2507002A7466 /* GameObjectManager.m */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		69080AFC19AC2F40002A7466 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69080AFD19AC2F52002A7466 /* GridController.h */,
+				69080AFE19AC2F52002A7466 /* GridController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		6997579C19A0605D0020D936 = {
@@ -1707,6 +1719,7 @@
 		69975A2119A0605F0020D936 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				69080AFC19AC2F40002A7466 /* Controllers */,
 				69080AF519AC247A002A7466 /* Managers */,
 				69080AF119AC2303002A7466 /* GameObjects */,
 				69975C5719A068970020D936 /* Scenes */,
@@ -2126,6 +2139,7 @@
 				6997587119A0605E0020D936 /* CCParallaxNode.m in Sources */,
 				6997590419A0605E0020D936 /* ccUtils.c in Sources */,
 				6997586119A0605E0020D936 /* CCLayoutBox.m in Sources */,
+				69080AFF19AC2F52002A7466 /* GridController.m in Sources */,
 				699758BA19A0605E0020D936 /* CCTexture.m in Sources */,
 				6997590C19A0605E0020D936 /* CGPointExtension.m in Sources */,
 				6997583619A0605D0020D936 /* CCActionTween.m in Sources */,
