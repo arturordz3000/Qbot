@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "cocos2d-ui.h"
 
 @interface ScreenManager : NSObject
+
++ (float) getScreenWidth;
++ (float) getScreenHeight;
 
 @end

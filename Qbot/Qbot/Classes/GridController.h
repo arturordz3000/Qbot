@@ -23,5 +23,7 @@
 - (GridController*) initWithColumns:(int)numColumns rows:(int)numRows;
 - (CGPoint) getPositionAtColumn:(int)columnIndex row:(int)rowIndex;
 - (ColoredBlock*) getColoredBlockAtColumn:(int)columnIndex row:(int)rowIndex;
+- (void) addColoredBlockAtColumn:(int)column row:(int)row;
+- (void) fillRowsWithColoredBlocks:(int)numRows;
 
 @end

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ColoredBlock resizeSprite:height:]:ColoredBlock.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sprite.scaleX">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -8,6 +8,10 @@
 
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
+#import "GameObjectManager.h"
+#import "GridController.h"
+#import "ColoredBlock.h"
+#import "ScreenManager.h"
 
 @interface DemoMainScene : CCScene
 

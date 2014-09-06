@@ -15,7 +15,7 @@
 + (GameObjectManager*) sharedManager;
 - (GameObjectManager*) init;
 - (void) setCurrentScene:(CCScene*) scene;
-- (CCSprite*) addSprite:(NSString*) spriteName atPosition:(CGPoint) position;
+- (CCSprite*) addSprite:(CCSprite*) sprite atPosition:(CGPoint) position;
 - (void) moveSprite:(CCSprite*) sprite toPosition:(CGPoint)position withDuration:(NSTimeInterval) duration shouldRemoveFromScene:(BOOL)shouldRemoveFromScene;
 - (NSString*) getRandomBlockSpriteName;
 

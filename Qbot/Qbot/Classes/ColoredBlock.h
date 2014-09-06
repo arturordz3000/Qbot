@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "cocos2d-ui.h"
+#import "GameObjectManager.h"
+#import "ScreenManager.h"
 
 @interface ColoredBlock : NSObject
+
+@property NSString* spriteName;
+@property CCSprite* sprite;
+
+- (ColoredBlock*) initWithSpriteName:(NSString*) spriteName;
+- (void) resizeSprite:(float) width height:(float)height;
 
 @end

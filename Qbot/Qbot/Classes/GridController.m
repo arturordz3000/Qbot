@@ -31,7 +31,7 @@
         blocksInGrid = [[NSMutableArray alloc] initWithCapacity:totalTiles];
         
         for (int i = 0; i < totalTiles; i++) {
-            [blocksInGrid insertObject:nil atIndex:i];
+            [blocksInGrid insertObject:[NSNull null] atIndex:i];
         }
     }
     
@@ -48,7 +48,24 @@
 }
 
 - (ColoredBlock *)getColoredBlockAtColumn:(int)columnIndex row:(int)rowIndex {
-    return [blocksInGrid objectAtIndex:columnIndex * rowIndex];
+    return [blocksInGrid objectAtIndex:numColumns * rowIndex + columnIndex];
+}
+
+- (void)addColoredBlockAtColumn:(int)columnIndex row:(int)rowIndex {
+    ColoredBlock* coloredBlock = [[ColoredBlock alloc] initWithSpriteName:[[GameObjectManager sharedManager] getRandomBlockSpriteName]];
+    [coloredBlock resizeSprite:rowSize height:columnSize];
+    
+    [self.blocksInGrid replaceObjectAtIndex:numColumns * rowIndex + columnIndex withObject:coloredBlock];
+    
+    [[GameObjectManager sharedManager] addSprite:coloredBlock.sprite atPosition:[self getPositionAtColumn:columnIndex row:rowIndex]];
+}
+
+- (void)fillRowsWithColoredBlocks:(int)numRows {
+    for (int i = 0; i < numRows; i++) {
+        for (int j = 0; j < self.numColumns; j++) {
+            [self addColoredBlockAtColumn:j row:i];
+        }
+    }
 }
 
 @end

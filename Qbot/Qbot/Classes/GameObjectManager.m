@@ -26,13 +26,13 @@ static GameObjectManager* sharedGameObjectManager = nil;
     if (self = [super init]) {
         currentScene = nil;
         blockSpritesNames = [[NSMutableArray alloc] init];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_001"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_002"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_003"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_004"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_005"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_006"];
-        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_007"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_001.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_002.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_003.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_004.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_005.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_006.png"];
+        [blockSpritesNames addObject:@"Blocks_01_128x128_Alt_00_007.png"];
     }
     
     return self;
@@ -42,12 +42,11 @@ static GameObjectManager* sharedGameObjectManager = nil;
     currentScene = scene;
 }
 
-- (CCSprite*)addSprite:(NSString *)spriteName atPosition:(CGPoint)position {
+- (CCSprite*) addSprite:(CCSprite*) sprite atPosition:(CGPoint) position; {
     if (!currentScene) return nil;
     
-    CCSprite* sprite = [CCSprite spriteWithImageNamed:spriteName];
     sprite.positionType = CCPositionTypeNormalized;
-    sprite.position = position;
+    sprite.position = ccp(position.x, position.y);
     [currentScene addChild:sprite];
     
     return sprite;

@@ -10,4 +10,12 @@
 
 @implementation ScreenManager
 
++ (float) getScreenWidth {
+    return [[CCDirector sharedDirector] viewSize].width;
+}
+
++ (float) getScreenHeight {
+    return [[CCDirector sharedDirector] viewSize].height;
+}
+
 @end
