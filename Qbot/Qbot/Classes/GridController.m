@@ -11,6 +11,11 @@
 @implementation GridController {
     float halfColumnSize;
     float halfRowSize;
+    
+    // Debug Variables
+    float screenAspectRatio;
+    float screenWidth;
+    float screenHeight;
 }
 
 @synthesize numColumns;
@@ -21,12 +26,19 @@
 
 - (GridController *)initWithColumns:(int)numColumns rows:(int)numRows {
     if (self = [super init]) {
+        
+        screenWidth = [ScreenManager getScreenWidth];
+        screenHeight = [ScreenManager getScreenHeight];
+        screenAspectRatio = [ScreenManager getAspectRatio];
+        
         self.numColumns = numColumns;
         self.numRows = numRows;
+        
         self.columnSize = 1.0f / (float)numColumns;
         halfColumnSize = self.columnSize / 2;
-        self.rowSize = 1.0f / (float)numRows;
+        self.rowSize = columnSize * [ScreenManager getAspectRatio];
         halfRowSize = self.rowSize / 2;
+        
         int totalTiles = self.numColumns * self.numRows;
         blocksInGrid = [[NSMutableArray alloc] initWithCapacity:totalTiles];
         
@@ -41,8 +53,9 @@
 - (CGPoint)getPositionAtColumn:(int)columnIndex row:(int)rowIndex {
     CGPoint position;
     
-    position.x = self.columnSize * columnIndex + halfColumnSize;
-    position.y = self.rowSize * rowIndex + halfRowSize;
+    position.x = self.columnSize * screenAspectRatio * columnIndex + (halfColumnSize * screenAspectRatio);
+    position.x += (1 - screenAspectRatio) / 2;
+    position.y = self.columnSize * rowIndex + halfColumnSize;
     
     return position;
 }

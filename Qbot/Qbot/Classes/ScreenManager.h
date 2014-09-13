@@ -14,5 +14,6 @@
 
 + (float) getScreenWidth;
 + (float) getScreenHeight;
++ (float) getAspectRatio;
 
 @end

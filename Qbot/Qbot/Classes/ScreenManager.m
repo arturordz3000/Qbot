@@ -18,4 +18,8 @@
     return [[CCDirector sharedDirector] viewSize].height;
 }
 
++ (float) getAspectRatio {
+    return [ScreenManager getScreenHeight] / [ScreenManager getScreenWidth];
+}
+
 @end
